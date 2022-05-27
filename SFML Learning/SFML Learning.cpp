@@ -4,7 +4,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "My Program");
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Cube Bouncer");
     window.setFramerateLimit(60);
 
     sf::RectangleShape rect;
