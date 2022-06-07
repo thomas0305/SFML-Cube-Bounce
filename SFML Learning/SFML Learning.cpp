@@ -17,7 +17,7 @@ int main()
 
     constexpr int windowWidth = 1280, windowHeight = 720;
 
-    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight, "My Program");
+    sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "My Program");
     window.setFramerateLimit(60);
 
     sf::RectangleShape rect;
