@@ -4,6 +4,10 @@
 
 // https://www.youtube.com/watch?v=R87RUYUfgwM
 
+/*
+This Function is called every time the corner hits the corner perfectly. 
+Because of cornerCount is a static variable, the result will be saved until the program is closed, meaning that the number will increase after each time it is called.
+*/
 int cornerHit() {
     static int cornerCount = 0;
     cornerCount++;
@@ -14,17 +18,22 @@ int main()
 {
     std::cout << "This is a test \n";
 
-
+    // SETS THE WINDOW SIZE.
+    // windowWidth Represents the width of the window, windowHeight represents the height of the window. 
     constexpr int windowWidth = 1280, windowHeight = 720;
 
+    //Creates the window itsself, sets the window to the sizes above, and names the window to "My Program".
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "My Program");
+    //Sets the FPS limit to 60 fps. (Will eventually replace this with Vsync & delta time)
     window.setFramerateLimit(60);
 
+    //Draws the rectangle, sets its name to rect.
     sf::RectangleShape rect;
 
+    //Creates a 2D vector from SFML's library that stores its X value and Y value. This will be updated in every loop further down. 
     sf::Vector2f rectanglePosition(0, 0);
 
-
+    //Sets the size of the rectangle. 
     constexpr int rectHeight = 100, rectWidth = 100;
 
     rect.setPosition(rectanglePosition);
